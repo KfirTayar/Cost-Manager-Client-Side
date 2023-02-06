@@ -1,0 +1,47 @@
+.get-report-page {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 50px;
+}
+
+.get-report-page h1 {
+    text-align: center;
+    font-size: 50px;
+    font-weight: 200;
+}
+
+.get-report-form {
+    margin: auto;
+    width: 800px;
+    height: 100px;
+    padding: 20px 50px 90px 100px;
+    display: flex;
+    border-radius: 25px;
+    background-color: lavender;
+    box-shadow: 1px 1px;
+}
+
+.get-report-form-labels {
+    font-size: 18px;
+    font-weight: 350;
+}
+
+.get-report-year {
+    padding: 10px 10px 10px 10px;
+}
+
+.get-report-month {
+    padding: 10px 10px 10px 150px;
+}
+
+.get-report-form-button {
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    z-index: 15;
+    top: 75%;
+    left: 50%;
+    margin: -100px 0 0 -150px;
+}
