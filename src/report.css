@@ -6,21 +6,21 @@
     padding-bottom: 50px;
 }
 
-.get-report-page h1 {
+.get-report-page h2 {
     text-align: center;
-    font-size: 50px;
+    font-size: 25px;
     font-weight: 200;
+    margin: 10px;
 }
 
 .get-report-form {
-    margin: auto;
+    margin: 5px;
     width: 800px;
-    height: 100px;
+    height: 90px;
     padding: 20px 50px 90px 100px;
     display: flex;
     border-radius: 25px;
     background-color: lavender;
-    box-shadow: 1px 1px;
 }
 
 .get-report-form-labels {
@@ -37,11 +37,12 @@
 }
 
 .get-report-form-button {
-    position: absolute;
-    width: 300px;
-    height: 200px;
+    position: relative;
+    padding: 150px 10px 10px 10px;
+    width: 400px;
+    height: 100px;
     z-index: 15;
-    top: 75%;
-    left: 50%;
+    top: 55%;
+    left: -340px;
     margin: -100px 0 0 -150px;
 }

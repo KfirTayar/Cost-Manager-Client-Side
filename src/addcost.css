@@ -1,4 +1,5 @@
-/* Kfir Tayar 208991430 */
+/* Kfir Tayar 208991430
+   Adi */
 
 .add-cost-page {
     margin: auto;
@@ -8,21 +9,21 @@
     padding-bottom: 50px;
 }
 
-.add-cost-page h1 {
+.add-cost-page h2 {
     text-align: center;
-    font-size: 50px;
+    font-size: 25px;
+    margin: 10px;
     font-weight: 200;
 }
 
 .add-cost-form {
-    margin: auto;
+    margin: 5px;
     width: 800px;
     height: 100px;
     padding: 20px 50px 90px 100px;
     display: flex;
     border-radius: 25px;
     background-color: lavender;
-    box-shadow: 1px 1px;
 }
 
 .add-cost-form-fields {
@@ -36,40 +37,32 @@
     font-weight: 350;
 }
 
-.add-cost-form-fields input, .add-cost-form-fields select, .add-cost-form-fields textarea {
-    padding: 1em;
+.add-cost-form-fields input, select, textarea{
+    padding: 10px;
     background-color: white;
-    border-radius: 20px;
+    border-radius: 30px;
 }
 
-table {
-    width: 70%; /* adjust as needed */
-    border-collapse: collapse; /* remove the cell spacing */
-    margin: 20px; /* add margin around the table */
-    font-family: Arial, Helvetica, sans-serif; /* choose a font */
-    white-space: pre-wrap;
+.add-cost-form-table {
+    width: 70%;
+    margin: 15px;
 }
 
-th{
-    background-color: darksalmon;
+.add-cost-form-header{
+    background-color: #90a4ae;
     color: white;
-    padding: 70px;
-}
-
-th, td {
-    border: 1px solid black; /* add a border to the cells */
-    padding: 2px; /* add some padding to the cells */
-    text-align: center; /* align the text to the left */
-}
-
-/*Add hover effect to the rows*/
-td:hover {
-    background-color: lavenderblush;
 }
 
 textarea{
     resize: none;
     height: 50px;
 }
+
+td:hover {
+    background-color: #eceff1;
+}
+
+
+
 
 
