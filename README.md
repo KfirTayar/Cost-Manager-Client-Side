@@ -11,3 +11,9 @@
 * There is an option to get a report by the categories year & month on the "GetRepotPage" page.
 
 ## Demo
+
+A user can insert a cost based on the following categories: date, sum, category, currency, and description.
+It is necessary to insert three categories: sum, category, and description.
+The data was stored in Local Storage.
+When a cost is added, we can see it in the table below in the "AddCostPage", which represents the current Local Storage.
+In the "GetRepotPage" page, you have the option to get a report by year & month.
