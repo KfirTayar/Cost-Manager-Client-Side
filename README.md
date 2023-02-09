@@ -1,19 +1,17 @@
-# Cost Manager Web Application Project (Using React.js)
+# Cost Manager Web Application (Using React.js)
 
-* The user can insert a cost by the according to the categories: date, sum, category, currency and description.
+The cost Manager App is used for tracking your daily costs due the years. You can get a report for every</br> month and it assists you to plan your budget and spending money in order way.
 
-* The user must insert the catecories: sum, category and description.
+## Features
+* The user can insert a cost according to the categories: ***date, sum, category, currency, and description***.
 
-* The data was saved in **Local Storage**.
+* The user must insert the categories: ***sum, category, and description***.
 
-* When cost was added, we can see him in the table below in the "AddCostPage" that represents the current Local Storage.
+* Data is stored in **Local Storage**.
 
-* There is an option to get a report by the categories year & month on the "GetRepotPage" page.
+* When cost was added, we can see it in the table below on the "AddCostPage" page that represents the current Local Storage.
+
+* There is an option to get a filtered report by the categories ***year & month*** on the "GetRepotPage" page.
 
 ## Demo
 
-A user can insert a cost based on the following categories: date, sum, category, currency, and description.
-It is necessary to insert three categories: sum, category, and description.
-The data was stored in Local Storage.
-When a cost is added, we can see it in the table below in the "AddCostPage", which represents the current Local Storage.
-In the "GetRepotPage" page, you have the option to get a report by year & month.
