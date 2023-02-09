@@ -41,7 +41,7 @@ const AddCostPage = () => {
         document.title = 'Cost Manager App';
 
         async function updatedTable() {
-            const newTable = await localStorage.getTable('costs');
+            const newTable = await localStorage.getCosts('costs');
             if(newTable)
                 setCosts(newTable);
         }

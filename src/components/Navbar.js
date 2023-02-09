@@ -14,6 +14,7 @@ function Navbar() {
         <AppBar position="sticky">
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
+                    <div><img src="logo192.png" width='50' height='50'/></div>
                     <Typography
                         variant="h6"
                         noWrap
@@ -29,7 +30,7 @@ function Navbar() {
                             textDecoration: 'none',
                         }}
                     >
-                        Cost Manager App
+                        &nbsp;Cost Manager App {/* Code for one space: &nbsp; */}
                     </Typography>
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                         <Button

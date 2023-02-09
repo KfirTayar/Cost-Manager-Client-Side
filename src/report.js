@@ -48,7 +48,7 @@ const GetReportPage = () => {
 
     // Getting a filtered report from the local storage
     async function getReport() {
-        const report = await localStorage.getCostsList(month, year, 'costs');
+        const report = await localStorage.getFilteredReport(month, year, 'costs');
         const reportTotalSum = await localStorage.getFilteredTotalSum(month, year, 'costs');
         console.log(reportTotalSum);
         if(report.length > 0) {

@@ -4,10 +4,10 @@
 const LocalStorage = {
 
     // Returns object with filtered costs by year and month
-    async getCostsList(month, year, key) {
+    async getFilteredReport(month, year, key) {
         const unfilteredTable = JSON.parse(localStorage.getItem(key));
         const filteredByMonthAndYear = unfilteredTable.filter(cost =>
-            (month === parseInt(cost.date.slice(6,7))) && (year === parseInt(cost.date.slice(0,4))));
+            (month === parseInt(cost.date.slice(5,7))) && (year === parseInt(cost.date.slice(0,4))));
 
         return filteredByMonthAndYear;
     },
@@ -17,14 +17,14 @@ const LocalStorage = {
         let Totalsum = 0;
         const unfilteredTable = JSON.parse(localStorage.getItem(key));
         const filteredByMonthAndYear = unfilteredTable.filter(cost =>
-            (month === parseInt(cost.date.slice(6,7))) && (year === parseInt(cost.date.slice(0,4))));
+            (month === parseInt(cost.date.slice(5,7))) && (year === parseInt(cost.date.slice(0,4))));
         let filteredReportTotalSum = filteredByMonthAndYear.map(cost => (Totalsum = Totalsum + parseInt(cost.sum)));
          filteredReportTotalSum = filteredReportTotalSum[(filteredReportTotalSum.length) - 1];
         return filteredReportTotalSum;
     },
 
     // Return the costs object from the local storage
-    async getTable(key){
+    async getCosts(key){
       return JSON.parse(localStorage.getItem(key));
     },
 
