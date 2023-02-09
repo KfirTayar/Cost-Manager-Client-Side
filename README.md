@@ -13,5 +13,10 @@ The cost Manager App is used for tracking your daily costs due the years. You ca
 
 * There is an option to get a filtered report by the categories ***year & month*** on the "GetRepotPage" page.
 
+## Material UI module installtion
+```
+npm install @mui/material @emotion/react @emotion/styled
+```
+
 ## Demo
 
