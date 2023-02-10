@@ -1,20 +1,19 @@
-# Cost Manager Web Application (Using React.js)
+# Cost Manager Web Application
 
-This app is used for tracking your daily costs due the years. You can get a report for every</br> month and it assists you to plan your budget and spending money in order way.
+This app is used for tracking your daily costs through the years. 
+By using this app, you can add costs and get a report which helps you plan your budget and spend money effectively.
 
 ## Database
-- Data is stored in **Local Storage**.
+* Data is stored in **Local Storage**.
 
 ## Application
-The application is built using React.js and runs on the client side. It includes the following routes:
+The application is built using **React.js** and runs on the client side. It includes the following routes:
 
-1. /addcost/ - for inserting a cost according to the parameters: ***date, sum, category, currency, and description***.
-</br>The user must insert the parameters: ***sum, category, and description***.
-When cost was added, you can see it in</br> the table below on this page that represents the current Local Storage.
+1. /addcost/ - for inserting a cost according to the parameters: **date, sum, category, currency, and description**. The user must insert the parameters: **sum, category, and description**. You can see your costs in the table below which represents the current Local Storage.
 
-2. /report/ - for getting a filtered report by the parameters ***year & month***.
+2. /report/ - for getting a filtered report by the parameters ***year and month***.
 
-3. /about/ - for getting a report in JSON about team members.
+3. /about/ - for getting a report about team members in JSON.
 
 ### Material UI module installtion
 ```
