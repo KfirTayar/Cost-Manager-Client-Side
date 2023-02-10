@@ -1,6 +1,6 @@
 # Cost Manager Web Application
 
-This app is used for tracking your daily costs through the years. 
+This app is used for tracking your daily costs through the years.<br/> 
 By using this app, you can add costs and get a report which helps you plan your budget and spend money effectively.
 
 ## Database
