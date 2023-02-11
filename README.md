@@ -13,7 +13,7 @@ The application is built using **React.js** and runs on the client side. It incl
 
 2. /report/ - for getting a filtered report by the parameters ***year and month***.
 
-3. /about/ - for getting a report about team members in JSON.
+3. /about/ - for getting a report about team members.
 
 ### Material UI module installtion
 ```
