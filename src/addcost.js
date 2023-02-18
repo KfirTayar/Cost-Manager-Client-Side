@@ -1,10 +1,10 @@
 // Kfir Tayar 208991430
-// Adi
+// Adi Gertel 206481129
 
 import React from 'react';
 import './addcost.css';
 import {useState, useEffect} from 'react';
-import localStorage from "./localStorage";
+import localStorage from "./localstorage";
 
 // Imports from MUI lib
 import Button from '@mui/material/Button';
@@ -28,7 +28,7 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
         fontSize: 16,
     },
 }));
-const StyledTableRow = styled(TableRow)(({ theme }) => ({
+const StyledTableRow = styled(TableRow)(() => ({
     '&:nth-of-type(odd)': {
         backgroundColor: '#cfd8dc',
     },
@@ -69,7 +69,13 @@ const AddCostPage = () => {
     async function addCost() {
         // Validates if the necessary categories are exist
         if (!sum || !category || !description) {
-            alert("One or more of the necessary fields are not found!")
+            alert('One or more of the required fields are not found!');
+            return;
+        }
+
+        // Validates the input of the sum property
+        if (sum < 0){
+            alert('The sum property has invalid input');
             return;
         }
 
@@ -79,60 +85,60 @@ const AddCostPage = () => {
 
         // Clearing the content of buttons
         clearButtons();
-        alert("New cost has been created!");
+        alert('New cost has been created!');
     }
 
-    // Creates index for the costs table
-    let index = 1;
+    let index = 1; // Creates index for the costs table
+    const today = new Date().toISOString().split('T')[0]; // Creates current date for date validation
 
     return (
-        <div className="add-cost-page">
+        <div className='add-cost-page'>
             <h2>Please insert your costs</h2>
 
             {/* Creates a form that collects information on the costs */}
-            <div className="add-cost-form">
+            <div className='add-cost-form'>
                 <div>
-                    <div className="add-cost-form-fields">
+                    <div className='add-cost-form-fields'>
                         <label className='add-cost-form-labels'>Date:</label>
-                        <input type="date" value={date}
-                               onChange={e => setDate(e.target.value)} required
-                               autoComplete={'off'} max={''}/>
+                        <input type='date' value={date}
+                               onChange={e => setDate(e.target.value)}
+                               max={today}/>
                     </div>
-                    <div className="add-cost-form-fields">
-                        <label className='add-cost-form-labels'>Sum:</label><input type="number" value={sum}
-                                                     onChange={e => setSum(e.target.value)}/>
+                    <div className='add-cost-form-fields'>
+                        <label className='add-cost-form-labels'>Sum:</label><input type='number' value={sum}
+                                                                                   onChange={e => setSum(e.target.value)}/>
                     </div>
                 </div>
                 <div>
-                    <div className="add-cost-form-fields">
+                    <div className='add-cost-form-fields'>
                         <label className='add-cost-form-labels'>Category:</label>
                         <select value={category} onChange={e => setCategory(e.target.value)}>
-                            <option value="food">Food</option>
-                            <option value="health">Health</option>
-                            <option value="housing">Housing</option>
-                            <option value="sport">Sport</option>
-                            <option value="education">Education</option>
-                            <option value="transportation">Transportation</option>
-                            <option value="other">Other</option>
+                            <option value='food'>Food</option>
+                            <option value='health'>Health</option>
+                            <option value='housing'>Housing</option>
+                            <option value='sport'>Sport</option>
+                            <option value='education'>Education</option>
+                            <option value='transportation'>Transportation</option>
+                            <option value='other'>Other</option>
                         </select>
                     </div>
-                    <div className="add-cost-form-fields">
+                    <div className='add-cost-form-fields'>
                         <label className='add-cost-form-labels'>Currency:</label>
                         <select value={currency} onChange={e => setCurrency(e.target.value)}>
-                            <option value="ILS">ILS</option>
-                            <option value="USD">USD</option>
-                            <option value="GPB">GPB</option>
-                            <option value="EUR">EUR</option>
-                            <option value="CNY">CNY</option>
+                            <option value='ILS'>ILS</option>
+                            <option value='USD'>USD</option>
+                            <option value='GPB'>GPB</option>
+                            <option value='EUR'>EUR</option>
+                            <option value='CNY'>CNY</option>
                         </select>
                     </div>
                 </div>
                 <div>
-                    <div className="add-cost-form-fields">
+                    <div className='add-cost-form-fields'>
                         <label className='add-cost-form-labels'>Description: </label>
                         <textarea value={description} onChange={e => setDescription(e.target.value)}></textarea>
                     </div>
-                    <Button fullWidth='True' variant="contained" color="secondary" endIcon={<AddCard />}
+                    <Button fullWidth='True' variant='contained' color='secondary' endIcon={<AddCard />}
                             onClick={addCost}> Add cost
                     </Button>
                 </div>
@@ -141,26 +147,26 @@ const AddCostPage = () => {
             {/* Creates a table that represents the current local storage */}
             <div className='add-cost-form-table'>
                 <TableContainer component={Paper}>
-                    <Table size={'small'}  sx={{ minWidth: 700 }} aria-label="customized table">
+                    <Table size={'small'}  sx={{ minWidth: 700 }} aria-label='customized table'>
                         <TableHead className='add-cost-form-header'>
                             <TableRow>
                                 <StyledTableCell>Index</StyledTableCell>
-                                <StyledTableCell align="right">Sum</StyledTableCell>
-                                <StyledTableCell align="right">Category</StyledTableCell>
-                                <StyledTableCell align="right">Currency</StyledTableCell>
-                                <StyledTableCell align="right">Date</StyledTableCell>
-                                <StyledTableCell align="right">Description</StyledTableCell>
+                                <StyledTableCell align='right'>Sum</StyledTableCell>
+                                <StyledTableCell align='right'>Category</StyledTableCell>
+                                <StyledTableCell align='right'>Currency</StyledTableCell>
+                                <StyledTableCell align='right'>Date</StyledTableCell>
+                                <StyledTableCell align='right'>Description</StyledTableCell>
                             </TableRow>
                         </TableHead>
                         <TableBody>
                             {costs.map((cost) => (
                                 <StyledTableRow key={index}>
-                                    <StyledTableCell component="th" scope="row">{index++}</StyledTableCell>
-                                    <StyledTableCell align="right">{cost.sum}</StyledTableCell>
-                                    <StyledTableCell align="right">{cost.category}</StyledTableCell>
-                                    <StyledTableCell align="right">{cost.currency}</StyledTableCell>
-                                    <StyledTableCell align="right">{cost.date}</StyledTableCell>
-                                    <StyledTableCell align="right">{cost.description}</StyledTableCell>
+                                    <StyledTableCell component='th' scope='row'>{index++}</StyledTableCell>
+                                    <StyledTableCell align='right'>{cost.sum}</StyledTableCell>
+                                    <StyledTableCell align='right'>{cost.category}</StyledTableCell>
+                                    <StyledTableCell align='right'>{cost.currency}</StyledTableCell>
+                                    <StyledTableCell align='right'>{cost.date}</StyledTableCell>
+                                    <StyledTableCell align='right'>{cost.description}</StyledTableCell>
                                 </StyledTableRow>
                             ))}
                         </TableBody>

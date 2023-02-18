@@ -1,3 +1,6 @@
+// Kfir Tayar 208991430
+// Adi Gertel 206481129
+
 import React from 'react';
 import './about.css';
 import {useEffect} from 'react';
@@ -5,9 +8,7 @@ import {useEffect} from 'react';
 //
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
-import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
 const AboutPage = () => {
@@ -17,10 +18,10 @@ const AboutPage = () => {
         document.title = 'About Page';
     }, []);
 
-    // Creating Cards for the team members
+    // Creating welcome cards for the team members
     const bull = (
         <Box
-            component="span"
+            component='span'
             sx={{display: 'inline-block', mx: '4px', transform: 'scale(1)'}}
         >
             •
@@ -28,19 +29,19 @@ const AboutPage = () => {
     );
 
     return (
-        <div className="about-page">
+        <div className='about-page'>
             <h2>About the team members</h2>
-            <div className="about-page-cards">
+            <div className='about-page-cards'>
                 <Card sx={{backgroundColor:'lavender', minWidth: 275}}>
                     <CardContent>
-                        <Typography sx={{mb: 2.5}} variant="h5" component="div">
+                        <Typography sx={{mb: 2.5}} variant='h5' component='div'>
                             {bull}Kfir Tayar
                         </Typography>
-                        <Typography sx={{mb: 2.5}} color="text.secondary">
+                        <Typography sx={{mb: 2.5}} color='text.secondary'>
                             ID: 208991430<br/>
                             Email: kfirtayar145@gmail.com
                         </Typography>
-                        <Typography variant="body2">
+                        <Typography variant='body2'>
                             3rd year Computer Science student at HIT
                         </Typography>
                     </CardContent>
@@ -48,14 +49,14 @@ const AboutPage = () => {
 
                 <Card sx={{backgroundColor:'lavender', minWidth: 275}}>
                     <CardContent>
-                        <Typography sx={{mb: 2.5}} variant="h5" component="div">
+                        <Typography sx={{mb: 2.5}} variant='h5' component='div'>
                             {bull}Adi Gertel
                         </Typography>
-                        <Typography sx={{mb: 2.5}} color="text.secondary">
-                            ID: 208991430<br/>
-                            Email: kfirtayar145@gmail.com
+                        <Typography sx={{mb: 2.5}} color='text.secondary'>
+                            ID: 206481129<br/>
+                            Email: Adi26gertel@gmail.com
                         </Typography>
-                        <Typography variant="body2">
+                        <Typography variant='body2'>
                             3rd year Computer Science student at HIT
                         </Typography>
                     </CardContent>

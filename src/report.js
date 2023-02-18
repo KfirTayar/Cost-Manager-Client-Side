@@ -1,8 +1,11 @@
+// Kfir Tayar 208991430
+// Adi Gertel 206481129
+
 import React from 'react';
 import './addcost.css';
 import './report.css'
 import {useState, useEffect} from 'react';
-import localStorage from "./localStorage";
+import localStorage from "./localstorage";
 
 // Imports from MUI lib
 import Button from '@mui/material/Button';
@@ -50,14 +53,14 @@ const GetReportPage = () => {
     async function getReport() {
         const report = await localStorage.getFilteredReport(month, year, 'costs');
         const reportTotalSum = await localStorage.getFilteredTotalSum(month, year, 'costs');
-        console.log(reportTotalSum);
+
         if(report.length > 0) {
             setCosts(report);
-            alert("Report filtered by: year=" + year + " month=" + month +
-                "\nThe total sum of this report is=" + reportTotalSum);
+            alert('Report filtered by: year=' + year + ' month=' + month +
+                '\nThe total sum of this report is=' + reportTotalSum);
         }
         else {
-            alert("There are no costs on this date");
+            alert('There are no costs on this date');
         }
     }
 
@@ -65,20 +68,20 @@ const GetReportPage = () => {
     let index = 1;
 
     return (
-        <div className="get-report-page">
-            <h2>Please insert the date you want to get report</h2>
+        <div className='get-report-page'>
+            <h2>Please insert the date you want to get a report</h2>
 
             {/* Creates a form that collects information for the report */}
-            <div className="get-report-form">
-                    <div className="get-report-year">
+            <div className='get-report-form'>
+                    <div className='get-report-year'>
                         <label className='get-report-form-labels'>Year:</label>
-                        <Stack sx={{ width: 300 }} spacing={1} direction="row">
+                        <Stack sx={{ width: 300 }} spacing={1} direction='row'>
                             <Slider
-                                aria-label="year"
-                                color={"secondary"}
+                                aria-label='year'
+                                color={'secondary'}
                                 aria-labelledby={'year'}
-                                orientation="horizontal"
-                                valueLabelDisplay="auto"
+                                orientation='horizontal'
+                                valueLabelDisplay='auto'
                                 min={1900}
                                 max={2023}
                                 defaultValue={1900}
@@ -86,15 +89,15 @@ const GetReportPage = () => {
                             />
                         </Stack>
                     </div>
-                <div className="get-report-month">
+                <div className='get-report-month'>
                     <label className='get-report-form-labels'>Month:</label>
-                    <Stack sx={{ width: 300 }} spacing={1} direction="row">
+                    <Stack sx={{ width: 300 }} spacing={1} direction='row'>
                         <Slider
-                            aria-label="year"
-                            color={"secondary"}
+                            aria-label='year'
+                            color={'secondary'}
                             aria-labelledby={'year'}
-                            orientation="horizontal"
-                            valueLabelDisplay="auto"
+                            orientation='horizontal'
+                            valueLabelDisplay='auto'
                             min={1}
                             max={12}
                             defaultValue={1}
@@ -102,8 +105,8 @@ const GetReportPage = () => {
                         />
                     </Stack>
                 </div>
-                <div className="get-report-form-button">
-                    <Button fullWidth='True' variant="contained" color="secondary" endIcon={<Assessment />}
+                <div className='get-report-form-button'>
+                    <Button fullWidth='True' variant='contained' color='secondary' endIcon={<Assessment />}
                     onClick={getReport}>Get Report
                     </Button>
                 </div>
@@ -112,26 +115,26 @@ const GetReportPage = () => {
             {/* Creates a table that represents the current report filtered by year and month */}
             <div className='add-cost-form-table'>
                 <TableContainer component={Paper}>
-                    <Table size={'small'}  sx={{ minWidth: 700 }} aria-label="customized table">
+                    <Table size={'small'}  sx={{ minWidth: 700 }} aria-label='customized table'>
                         <TableHead className='add-cost-form-header'>
                             <TableRow>
                                 <StyledTableCell>Index</StyledTableCell>
-                                <StyledTableCell align="right">Sum</StyledTableCell>
-                                <StyledTableCell align="right">Category</StyledTableCell>
-                                <StyledTableCell align="right">Currency</StyledTableCell>
-                                <StyledTableCell align="right">Date</StyledTableCell>
-                                <StyledTableCell align="right">Description</StyledTableCell>
+                                <StyledTableCell align='right'>Sum</StyledTableCell>
+                                <StyledTableCell align='right'>Category</StyledTableCell>
+                                <StyledTableCell align='right'>Currency</StyledTableCell>
+                                <StyledTableCell align='right'>Date</StyledTableCell>
+                                <StyledTableCell align='right'>Description</StyledTableCell>
                             </TableRow>
                         </TableHead>
                         <TableBody>
                             {costs.map((cost) => (
                                 <StyledTableRow key={cost.index}>
-                                    <StyledTableCell component="th" scope="row">{index++}</StyledTableCell>
-                                    <StyledTableCell align="right">{cost.sum}</StyledTableCell>
-                                    <StyledTableCell align="right">{cost.category}</StyledTableCell>
-                                    <StyledTableCell align="right">{cost.currency}</StyledTableCell>
-                                    <StyledTableCell align="right">{cost.date}</StyledTableCell>
-                                    <StyledTableCell align="right">{cost.description}</StyledTableCell>
+                                    <StyledTableCell component='th' scope='row'>{index++}</StyledTableCell>
+                                    <StyledTableCell align='right'>{cost.sum}</StyledTableCell>
+                                    <StyledTableCell align='right'>{cost.category}</StyledTableCell>
+                                    <StyledTableCell align='right'>{cost.currency}</StyledTableCell>
+                                    <StyledTableCell align='right'>{cost.date}</StyledTableCell>
+                                    <StyledTableCell align='right'>{cost.description}</StyledTableCell>
                                 </StyledTableRow>
                             ))}
                         </TableBody>
