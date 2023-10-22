@@ -1,5 +1,4 @@
-// Kfir Tayar 208991430
-// Adi Gertel 206481129
+// Kfir Tayar
 
 import React from 'react';
 import './about.css';
@@ -38,7 +37,7 @@ const AboutPage = () => {
                             {bull}Kfir Tayar
                         </Typography>
                         <Typography sx={{mb: 2.5}} color='text.secondary'>
-                            ID: 208991430<br/>
+                            ID: 000000000<br/>
                             Email: kfirtayar145@gmail.com
                         </Typography>
                         <Typography variant='body2'>
@@ -53,7 +52,7 @@ const AboutPage = () => {
                             {bull}Adi Gertel
                         </Typography>
                         <Typography sx={{mb: 2.5}} color='text.secondary'>
-                            ID: 206481129<br/>
+                            ID: 000000000<br/>
                             Email: Adi26gertel@gmail.com
                         </Typography>
                         <Typography variant='body2'>
