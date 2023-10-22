@@ -1,5 +1,4 @@
-// Kfir Tayar 208991430
-// Adi Gertel 206481129
+// Kfir Tayar
 
 const Localstorage = {
 
