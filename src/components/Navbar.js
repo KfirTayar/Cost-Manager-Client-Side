@@ -1,5 +1,4 @@
-// Kfir Tayar 208991430
-// Adi Gertel 206481129
+// Kfir Tayar
 
 // Imports from MUI lib
 import AppBar from '@mui/material/AppBar';
