@@ -45,21 +45,6 @@ const AboutPage = () => {
                         </Typography>
                     </CardContent>
                 </Card>
-
-                <Card sx={{backgroundColor:'lavender', minWidth: 275}}>
-                    <CardContent>
-                        <Typography sx={{mb: 2.5}} variant='h5' component='div'>
-                            {bull}Adi Gertel
-                        </Typography>
-                        <Typography sx={{mb: 2.5}} color='text.secondary'>
-                            ID: 000000000<br/>
-                            Email: Adi26gertel@gmail.com
-                        </Typography>
-                        <Typography variant='body2'>
-                            3rd year Computer Science student at HIT
-                        </Typography>
-                    </CardContent>
-                </Card>
             </div>
         </div>
     );
